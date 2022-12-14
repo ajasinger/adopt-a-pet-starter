@@ -1,10 +1,12 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 // import useHistory here.
 
 const PetDetailsNotFound = () => {
 
   // get the history object from useHistory()
+  const history = useHistory();
 
   const goBack = () => {
     // Go back!
@@ -19,7 +21,7 @@ const PetDetailsNotFound = () => {
         alt=""
       />
       <div className="actions-container">
-        <button className="button" onClick={goBack}>
+        <button className="button" onClick={() => history.goBack()}>
           Go Back
         </button>
       </div>
