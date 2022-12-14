@@ -6,7 +6,11 @@ const Search = () => {
 
   // get the history object here
   const history = useHistory();
+  
   const {search} = useLocation();
+  const queryParams = useMemo(() => {
+    return new URLSearchParams(search)
+  }, [search]); 
 
   const searchInputRef = useRef();
 
@@ -20,6 +24,7 @@ const Search = () => {
     // imperatively redirect with history.push()
     history.push('/search/?' + searchQuery)
   };
+
 
   return (
     <form onSubmit={onSearchHandler} className="search-form">
