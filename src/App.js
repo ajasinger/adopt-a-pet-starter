@@ -10,8 +10,8 @@ function App() {
     <Router>
           <div>
               <Navigation />
-              <Route>
-                <PetDetailsPage path='/:type/:id'/>
+              <Route path='/:type/:id'>
+                <PetDetailsPage/>
               </Route>
               <Route path='/:type?'>
                 <HomePage/>
