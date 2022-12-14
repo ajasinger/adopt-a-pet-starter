@@ -16,11 +16,16 @@ function App() {
                   <Route path='/:type?'>
                     <HomePage/>
                   </Route>
+                  <Route path='/search'>
+                    <SearchPage/>
+                  </Route>
                   <Navigation />
               </div>
           </Switch>
     </Router>
   );
 }
+
+//git push -u origin main
 
 export default App;
