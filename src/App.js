@@ -10,6 +10,9 @@ function App() {
     <Router>
           <Switch>
               <div>
+                  <Route path='/pet-details-not-found'>
+                    <PetDetailsNotFound/>
+                  </Route>
                   <Route path='/:type/:id'>
                     <PetDetailsPage/>
                   </Route>
@@ -17,7 +20,7 @@ function App() {
                     <HomePage/>
                   </Route>
                   <Route path='/search'>
-                    <SearchPage/>
+                    <SearchPage />
                   </Route>
                   <Navigation />
               </div>
