@@ -1,16 +1,11 @@
 import React, { useRef } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 // import useHistory here.
 
 const Search = () => {
 
   // get the history object here
   const history = useHistory();
-  
-  const {search} = useLocation();
-  const queryParams = useMemo(() => {
-    return new URLSearchParams(search)
-  }, [search]); 
 
   const searchInputRef = useRef();
 
